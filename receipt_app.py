@@ -203,15 +203,17 @@ def build_table(results):
 
 
 def highlight_flags(row):
+    # Set the text colour explicitly, so it stays readable on the coloured background
+    # whether the phone or browser is in dark or light mode.
     if row["Flag"] == "Check":
-        return ["background-color: #fff4d6"] * len(row)
+        return ["background-color: #fff4d6; color: #111111"] * len(row)
     if row["Flag"] == "Error":
-        return ["background-color: #fde2e2"] * len(row)
+        return ["background-color: #fde2e2; color: #111111"] * len(row)
     return [""] * len(row)
 
 
 st.set_page_config(page_title="Receipt to CSV", layout="wide")
-st.title("Alvin's Receipt to CSV")
+st.title("Receipt to CSV")
 st.caption("Upload receipt photos. Claude reads each one and produces CSV rows you can download.")
 
 api_key = load_api_key()
