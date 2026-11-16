@@ -213,7 +213,7 @@ def highlight_flags(row):
 
 
 st.set_page_config(page_title="Receipt to CSV", layout="wide")
-st.title("Receipt to CSV")
+st.title("Alvin's Receipt to CSV Prototype 0.01")
 st.caption("Upload receipt photos. Claude reads each one and produces CSV rows you can download.")
 
 api_key = load_api_key()
